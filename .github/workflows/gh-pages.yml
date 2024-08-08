@@ -46,10 +46,10 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          ref: exampleSite
-      - name: Setup Pages
-        id: pages
+        # with:
+          # ref: exampleSite
+      # - name: Setup Pages
+        # id: pages
         uses: actions/configure-pages@v3
       - name: Get Theme
         run: git submodule update --init --recursive
